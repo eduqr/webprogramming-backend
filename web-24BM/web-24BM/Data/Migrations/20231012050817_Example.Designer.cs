@@ -12,8 +12,8 @@ using web_24BM.Data;
 namespace web_24BM.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231009182739_09-10-2023Persona")]
-    partial class _09102023Persona
+    [Migration("20231012050817_Example")]
+    partial class Example
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -239,6 +239,10 @@ namespace web_24BM.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("AreaTrabajo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CURP")
                         .IsRequired()
                         .HasMaxLength(18)
@@ -251,6 +255,11 @@ namespace web_24BM.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
+
+                    b.Property<string>("RFC")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
 
                     b.HasKey("Id");
 

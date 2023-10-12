@@ -9,7 +9,6 @@ namespace web_24BM.Models
         [Key]
         public int Id { get; set; }
         
-        
         [Required]
         [StringLength(25)]
         public string Nombre { get; set; }
@@ -18,11 +17,12 @@ namespace web_24BM.Models
         
         [StringLength(18)]
         public string CURP { get; set; }
+        
         [DataType(DataType.Date)]
-
         public DateTime FechaNacimiento { get; set; }
 
-
-
+        [StringLength(13)]
+        public string RFC { get; set; }
+        public string AreaTrabajo { get; set; }
     }
 }
