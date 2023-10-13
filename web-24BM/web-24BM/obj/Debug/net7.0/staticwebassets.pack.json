@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\img\\aboutcpp.png",
+      "PackagePath": "staticwebassets\\img\\aboutcpp.png"
+    },
+    {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\img\\aboutdalle.webp",
+      "PackagePath": "staticwebassets\\img\\aboutdalle.webp"
+    },
+    {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\img\\aboutgitflow.png",
+      "PackagePath": "staticwebassets\\img\\aboutgitflow.png"
+    },
+    {
       "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
