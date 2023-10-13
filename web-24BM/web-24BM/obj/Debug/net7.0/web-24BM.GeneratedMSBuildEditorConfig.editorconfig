@@ -9,73 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = web_24BM
 build_property.RootNamespace = web_24BM
-build_property.ProjectDir = C:\Users\simpl\OneDrive\Escritorio\repo-backend\webprogramming-backend\web-24BM\web-24BM\
+build_property.ProjectDir = C:\Users\Upqroo\Desktop\repo-rl\webprogramming-backend\web-24BM\web-24BM\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\simpl\OneDrive\Escritorio\repo-backend\webprogramming-backend\web-24BM\web-24BM
+build_property.MSBuildProjectDirectory = C:\Users\Upqroo\Desktop\repo-rl\webprogramming-backend\web-24BM\web-24BM
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Contacto/Index.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Contacto/Formulario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9cRm9ybXVsYXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Contacto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Ejemplo/Index.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Ejemplo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWplbXBsb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Home/Index.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Home/Privacy.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Create.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Delete.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Details.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Edit.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Index.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Personas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Shared/Error.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/_ViewImports.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/_ViewStart.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simpl/OneDrive/Escritorio/repo-backend/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_Layout.cshtml]
+[C:/Users/Upqroo/Desktop/repo-rl/webprogramming-backend/web-24BM/web-24BM/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8js3jnurib

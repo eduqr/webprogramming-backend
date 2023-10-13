@@ -1,0 +1,39 @@
+﻿@model web_24BM.Models.EmailViewModel
+
+<div class="container mt-5">
+
+    @if (TempData["Email"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            Se ha enviado un correo de @TempData["Email"]
+        </div>
+    }
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center">Formulario de contacto</h3>
+            <p class="text-center">Escríbenos un mensaje y te contactaremos.</p>
+        </div>
+        <div class="col-8">
+            <form asp-action="EnviarFormulario" method="post">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                    <input type="email" asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                    <textarea class="form-control" asp-for="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h3>Solicita información</h3>
+            <p>Envíanos tu comentario y te responderemos en breve...</p>
+        </div>
+    </div>
+</div>
