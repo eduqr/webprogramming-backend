@@ -1,0 +1,68 @@
+﻿@model web_24BM.Models.EmailViewModel
+
+<div class="container mt-5">
+
+    @if (TempData["EmailT"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            Se ha enviado un correo de @TempData["EmailT"]
+        </div>
+    }
+
+    @if (TempData["EmailError"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            Ocurrió un error al enviar un correo de @TempData["EmailError"]
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center">Formulario de contacto</h3>
+            <p class="text-center">Escríbenos un mensaje y te contactaremos.</p>
+        </div>
+        <div class="col-8">
+            <form asp-action="EnviarFormulario" method="post">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" asp-for="Nombre" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                    <input type="email" asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+                    <input type="text" asp-for="Apellido" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" asp-for="FechaNacimiento" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Hora de entrada</label>
+                    <input type="time" asp-for="HoraEntrada" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="turno" class="form-label">Turno</label>
+                    <select asp-for="Turno" class="form-select" id="turno">
+                        <option disabled selected>--</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                    <textarea class="form-control" asp-for="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h3>Solicita información</h3>
+            <p>Envíanos tu comentario y te responderemos en breve...</p>
+        </div>
+    </div>
+</div>
