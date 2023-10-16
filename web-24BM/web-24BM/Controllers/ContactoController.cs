@@ -28,8 +28,8 @@ namespace web_24BM.Controllers
         [HttpPost]
         public IActionResult EnviarEmail(string email, string comentario)
         {
-            TempData["Email"] = email;
-            TempData["Comentario"] = comentario;
+            TempData["EmailT"] = email;
+            TempData["ComentarioT"] = comentario;
             EnviarEmailSmtp(email);
             return View("Index", "Contacto");
         }
@@ -37,9 +37,17 @@ namespace web_24BM.Controllers
         [HttpPost]
         public IActionResult EnviarFormulario(EmailViewModel model)
         {
-            TempData["Email"] = model.Email;
-            TempData["Comentario"] = model.Mensaje;
-            EnviarEmailSmtp(model.Email);
+            TempData["EmailT"] = model.Email;
+            TempData["ComentarioT"] = model.Mensaje;
+            //EnviarEmailSmtp(model.Email);
+
+            var result = _emailSenderService.SendEmail(model.Email);
+
+            if (!result)
+            {
+                TempData["EmailT"] = null;
+                TempData["EmailError"] = "Ocurrió un error";
+            }
             return View("Formulario", model);
         }
 

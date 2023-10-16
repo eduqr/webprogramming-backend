@@ -2,14 +2,19 @@
 
 <div class="container mt-5">
 
-    @if (TempData["Email"] != null)
+    @if (TempData["EmailT"] != null)
     {
         <div class="alert alert-success" role="alert">
-            Se ha enviado un correo de @TempData["Email"]
+            Se ha enviado un correo de @TempData["EmailT"]
         </div>
     }
 
-
+    @if (TempData["EmailError"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            Ocurrió un error al enviar un correo de @TempData["EmailError"]
+        </div>
+    }
 
     <div class="row">
         <div class="col-12">

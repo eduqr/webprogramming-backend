@@ -3,7 +3,7 @@ using System.Net;
 
 namespace web_24BM.Services
 {
-    public class EmailSenderService
+    public class EmailSenderService : IEmailSenderService
     {
         public bool SendEmail(string email)
         {
