@@ -25,7 +25,13 @@ namespace web_24BM.Controllers
                 TempData["msj"] = mensaje;
                 return View("Index");
             }
-            
+        }
+
+
+        // Test de vista
+        public IActionResult Detalles(Curriculum model)
+        {
+            return View("Detalles", model);
         }
     }
 }

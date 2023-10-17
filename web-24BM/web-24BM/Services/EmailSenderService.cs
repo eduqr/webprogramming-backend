@@ -48,14 +48,14 @@ namespace web_24BM.Services
                 mail.To.Add(data.Email);
                 mail.Subject = "Notificación de contacto";
                 mail.IsBodyHtml = true;
-                mail.Body = $"Se ha contactado la persona con el correo {data.Email} para solicitar información\n" +
-                            "Sus datos:\n" +
-                            $"Nombre: {data.Nombre}\n" +
-                            $"Apellido: {data.Apellido}\n" +
-                            $"Correo: {data.Email}\n" +
-                            $"Fecha de nacimiento: {data.FechaNacimiento}\n" +
-                            $"Hora de entrada: {data.HoraEntrada}\n" +
-                            $"Turno: {data.Turno}\n" +
+                mail.Body = $"Se ha contactado la persona con el correo {data.Email} para solicitar información<br><br>" +
+                            "Sus datos:<br>" +
+                            $"Nombre: {data.Nombre}<br>" +
+                            $"Apellido: {data.Apellido}<br>" +
+                            $"Correo: {data.Email}<br>" +
+                            $"Fecha de nacimiento: {data.FechaNacimiento}<br>" +
+                            $"Hora de entrada: {data.HoraEntrada}<br>" +
+                            $"Turno: {data.Turno}<br>" +
                             $"Mensaje: {data.Mensaje}";
                 smtp.Send(mail);
                 result = true;

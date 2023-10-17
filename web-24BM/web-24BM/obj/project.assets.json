@@ -11723,19 +11723,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Upqroo\\.nuget\\packages\\": {}
+    "C:\\Users\\simpl\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Upqroo\\Desktop\\repo-rl\\webprogramming-backend\\web-24BM\\web-24BM\\web-24BM.csproj",
+      "projectUniqueName": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\web-24BM.csproj",
       "projectName": "web-24BM",
-      "projectPath": "C:\\Users\\Upqroo\\Desktop\\repo-rl\\webprogramming-backend\\web-24BM\\web-24BM\\web-24BM.csproj",
-      "packagesPath": "C:\\Users\\Upqroo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Upqroo\\Desktop\\repo-rl\\webprogramming-backend\\web-24BM\\web-24BM\\obj\\",
+      "projectPath": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\web-24BM.csproj",
+      "packagesPath": "C:\\Users\\simpl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Upqroo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simpl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11805,7 +11810,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
