@@ -14,7 +14,7 @@
             <p class="text-center">Ingresa los datos de tu experiencia laboral</p>
         </div>
         <div class="col-8">
-            <form asp-action="EnviarFormulario" method="post">
+            <form asp-action="EnviarFormulario" method="post" enctype="multipart/form-data">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -60,7 +60,7 @@
         <div class="col-4">
             <h3>Solicita información</h3>
             <p>Envíanos tu comentario y te responderemos en breve...</p>
-            <a href="~/validaciones/detalles.cshtml">Ir a Detalles</a>
+            <a href="~/Validaciones/detalles">Ir a Detalles</a>
         </div>
     </div>
 </div>

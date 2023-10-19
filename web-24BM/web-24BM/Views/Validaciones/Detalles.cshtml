@@ -1,63 +1,51 @@
 ﻿@model web_24BM.Models.Curriculum
 
-@{
-    ViewData["Title"] = "Detalles";
-}
+@* <style>
+    .card img{
+        width: 400px;
+    }
+</style> *@
 
-<h1>Detalles</h1>
-
-<div>
-    <h4>Currículum</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Apellidos)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaNacimiento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Objetivo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Objetivo)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DatosLaboral)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DatosLaboral)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Foto)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Foto)
-        </dd>
-    </dl>
+<div class="d-flex justify-content-center align-items-center mb-3"> @*borrar este para no centrar*@
+    <div class="card" style="width: 28rem;">
+        <img src="https://i.redd.it/v0caqchbtn741.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            @* <h5 class="card-title">Nombre y apellido</h5> *@
+            <div class="row">
+                <div class="col-4">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Nombre</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Apellido</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Email</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Fecha de nacimiento</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-5">Dirección</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-6">Objetivo</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-7">Datos laborales</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    @*overflow-y: scroll*@
+                    <div style="height: 300px; overflow: auto;" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Nombre</h4>
+                        <p>Eduardo</p>
+                        <h4 id="list-item-2">Apellido</h4>
+                        <p>Rodríguez</p>
+                        <h4 id="list-item-3">Email</h4>
+                        <p>ejejm@gmail.com</p>
+                        <h4 id="list-item-4">Fecha de nacimiento</h4>
+                        <p>10/20/2023</p>
+                        <h4 id="list-item-5">Dirección</h4>
+                        <p>Av Silvestre</p>
+                        <h4 id="list-item-6">Objetivo</h4>
+                        <p>.</p>
+                        <h4 id="list-item-7">Datos laborales</h4>
+                        <p>Amplia experiencia en...</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary mt-3 align-content-center" style="float: right;">Siguiente registro</a>
+        </div>
+    </div>
 </div>
+
 

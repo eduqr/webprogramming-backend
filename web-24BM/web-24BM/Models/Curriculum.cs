@@ -19,7 +19,7 @@ namespace web_24BM.Models
         [Required(ErrorMessage = "La dirección es obligatoria")]
         public string Direccion { get; set; }
         public string Objetivo { get; set; }
-        public List<DatoLaboral> DatosLaboral { get; set;}
-        public IFormFile Foto { get; set; }
+        public List<DatoLaboral>? DatosLaboral { get; set;}
+        public IFormFile? Foto { get; set; }
     }
 }
