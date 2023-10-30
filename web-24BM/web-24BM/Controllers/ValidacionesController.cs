@@ -28,7 +28,7 @@ namespace web_24BM.Controllers
         }
 
 
-        // Test de vista
+        //Test de vista
         public IActionResult Detalles(Curriculum model)
         {
             return View("Detalles", model);

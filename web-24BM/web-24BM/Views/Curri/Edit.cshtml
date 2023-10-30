@@ -1,0 +1,55 @@
+﻿@model web_24BM.Models.Curriculum
+
+<div class="row">
+    <div class="col-12">
+        <form asp-action="Edit" asp-controller="Curri" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" value="@Model.Id" />
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellidos</label>
+                <input type="text" asp-for="Apellidos" class="form-control" />
+                <span asp-validation-for="Apellidos"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de nacimiento</label>
+                <input type="date" asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Dirección</label>
+                <input type="text" asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Objetivo</label>
+                <input type="text" asp-for="Objetivo" class="form-control" />
+                <span asp-validation-for="Objetivo"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Datos laborales</label>
+                <input type="text" asp-for="DatosLaboral" class="form-control" />
+                <span asp-validation-for="DatosLaboral"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre de la foto</label>
+                <input type="text" asp-for="NombreFoto" class="form-control" />
+                <span asp-validation-for="NombreFoto"></span>
+            </div>
+            @* <div class="mb-3">
+                <label class="form-label">Fotografía</label>
+                <input type="file" asp-for="Foto" class="form-control" />
+                <span asp-validation-for="Foto"></span>
+            </div> *@
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>

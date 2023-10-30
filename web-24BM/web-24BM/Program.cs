@@ -16,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IEmailSenderService, EmailSenderService>();
 builder.Services.AddSession();
+
+builder.Services.AddTransient<ICurriculum, CurriculumService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

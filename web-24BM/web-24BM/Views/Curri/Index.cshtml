@@ -1,0 +1,105 @@
+﻿@model IEnumerable<web_24BM.Models.Curriculum>
+
+<h1 class="text-center">Lista de currículums</h1>
+
+<div class="row">
+	@if (TempData["MenssageSuccess"] != null)
+	{
+		<div class="alert alert-success">@TempData["MenssageSuccess"]</div>
+	}
+	else if (TempData["ErrorMessage"] != null)
+	{
+		<div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+	}
+
+	<div class="col-12">
+		<a class="btn btn-success mb-3 me-auto" asp-action="Create" asp-controller="Curri">Nuevo curriculum</a>
+	</div>
+	<div class="col-12">
+		@if (Model.Any())
+		{
+			<table class="table table-bordered table-responsive">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							Nombre
+						</th>
+						<th>
+							Apellidos
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Fecha nacimiento
+						</th>
+						<th>
+							Dirección
+						</th>
+						<th>
+							Objetivo
+						</th>
+						<th>
+							Datos laborales
+						</th>
+						<th>
+							Foto
+						</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>
+								@item.Id
+							</td>
+							<td>
+								@item.Nombre
+							</td>
+							<td>
+								@item.Apellidos
+							</td>
+							<td>
+								@item.Email
+							</td>
+							<td>
+								@item.FechaNacimiento
+							</td>
+							<td>
+								@item.Direccion
+							</td>
+							<td>
+								@item.Objetivo
+							</td>
+							<td>
+								@item.DatosLaboral
+							</td>
+							<td>
+								Aqui foto
+							</td>
+							<td>
+								<div class="row">
+									<div class="col-2">
+										<a class="btn m-5 btn-primary" asp-action="Edit" asp-controller="Curri" asp-route-idCurriculum="@item.Id">Editar</a>
+									</div>
+									<div class="col-2">
+
+										<form asp-action="Delete" method="post">
+											<input type="hidden" name="idCurriculum" value="@item.Id">
+											<button type="submit" class="btn btn-danger">Eliminar</button>
+										</form>
+									</div>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+	</div>
+</div> 
