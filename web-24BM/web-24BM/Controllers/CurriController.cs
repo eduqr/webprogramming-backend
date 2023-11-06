@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using web_24BM.Models;
 using web_24BM.Services;
 
@@ -26,7 +27,7 @@ namespace web_24BM.Controllers
 		public async Task<IActionResult> Create(Curriculum model)
 		{
 			var response = await _curriculumService.Create(model);
-
+			
 			if (response.Success)
 			{
 				TempData["MenssageSuccess"] = response.Message;
@@ -83,5 +84,21 @@ namespace web_24BM.Controllers
 				return RedirectToAction("Index", "Curri");
 			}
 		}
+
+		[HttpGet]
+		public async Task<IActionResult> Details(int idCurriculum)
+		{
+            var curriculum = await _curriculumService.GetById(idCurriculum);
+
+            return View(curriculum);
+        }
+
+		[HttpGet]
+		public async Task<IActionResult> SeeCV(int idCurriculum)
+		{
+            var curriculum = await _curriculumService.GetById(idCurriculum);
+
+            return View(curriculum);
+        }
 	}
 }

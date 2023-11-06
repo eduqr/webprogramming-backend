@@ -1,55 +1,69 @@
 ﻿@model web_24BM.Models.Curriculum
 
-<div class="row">
-    <div class="col-12">
+<div class="d-flex justify-content-center align-items-center mb-5 mt-5" style="min-height: 100vh;">
+    <div class="col-4">
         <form asp-action="Edit" asp-controller="Curri" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" value="@Model.Id" />
+            <h4 class="fw-bold mb-4 text-center" style="color: #92aad0;">Edición de currículum</h4>
             <div class="mb-3">
-                <label class="form-label">Nombre</label>
-                <input type="text" asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre"></span>
+                <label class="form-label" style="color: #45526e;">Nombre</label>
+                <input type="text" asp-for="Nombre" class="form-control" placeholder="Su nombre" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Apellidos</label>
-                <input type="text" asp-for="Apellidos" class="form-control" />
-                <span asp-validation-for="Apellidos"></span>
+                <label class="form-label" style="color: #45526e;">Apellidos</label>
+                <input type="text" asp-for="Apellidos" class="form-control" placeholder="Sus apellidos" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email"></span>
+                <label class="form-label" style="color: #45526e;">CRUP</label>
+                <input type="text" asp-for="CURP" class="form-control" placeholder="Su CURP" />
+                <span asp-validation-for="CURP" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Fecha de nacimiento</label>
+                <label class="form-label" style="color: #45526e;">Correo electrónico</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="ejemplo@dominio.com" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" style="color: #45526e;">Fecha de nacimiento</label>
                 <input type="date" asp-for="FechaNacimiento" class="form-control" />
-                <span asp-validation-for="FechaNacimiento"></span>
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Dirección</label>
-                <input type="text" asp-for="Direccion" class="form-control" />
-                <span asp-validation-for="Direccion"></span>
+                <label class="form-label" style="color: #45526e;">Dirección</label>
+                <input type="text" asp-for="Direccion" class="form-control" placeholder="Av. Industrial #16" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Objetivo</label>
-                <input type="text" asp-for="Objetivo" class="form-control" />
-                <span asp-validation-for="Objetivo"></span>
+                <label class="form-label" style="color: #45526e;">Objetivo</label>
+                <input type="text" asp-for="Objetivo" class="form-control" placeholder="Nuevos retos..." />
+                <span asp-validation-for="Objetivo" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Datos laborales</label>
-                <input type="text" asp-for="DatosLaboral" class="form-control" />
-                <span asp-validation-for="DatosLaboral"></span>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Nombre de la foto</label>
-                <input type="text" asp-for="NombreFoto" class="form-control" />
-                <span asp-validation-for="NombreFoto"></span>
+                <label class="form-label" style="color: #45526e;">Datos laborales</label>
+                <input type="text" asp-for="DatosLaboral" class="form-control" placeholder="Experiencia en..." />
+                <span asp-validation-for="DatosLaboral" class="text-danger"></span>
             </div>
             @* <div class="mb-3">
-                <label class="form-label">Fotografía</label>
-                <input type="file" asp-for="Foto" class="form-control" />
-                <span asp-validation-for="Foto"></span>
+                <label class="form-label" style="color: #45526e;">Nombre de la foto</label>
+            <input type="text" asp-for="NombreFoto" class="form-control" />
+                <span asp-validation-for="NombreFoto" class="text-danger"></span>
             </div> *@
-            <button type="submit" class="btn btn-success">Enviar</button>
+            
+            <input hidden type="text" asp-for="NombreFoto" class="form-control" value="@Model.NombreFoto" /> @*Mantener la foto vivaaaaaa*@
+
+            <div class="mb-3">
+                <label class="form-label" style="color: #45526e;">Fotografía</label>
+                <input type="file" asp-for="Foto" class="form-control" />
+                <div class="text-center"><img class="mt-3" width="180" height="180" src="~/FotosCurri/@Model.NombreFoto" title="@Model.NombreFoto" /></div>
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-rounded" style="background-color: #AD8A64; color: #000;" asp-action="Index" asp-controller="Curri">Volver</a>
+                <button type="submit" class="btn btn-rounded" style="background-color: #495568; color: #fff; font-weight: bold;">Enviar</button>
+            </div>
+
         </form>
     </div>
 </div>

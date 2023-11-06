@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\web-24BM.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\FotosCurri\\kfc.jfif",
+      "PackagePath": "staticwebassets\\FotosCurri\\kfc.jfif"
+    },
+    {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\FotosCurri\\peeeeeepo.PNG",
+      "PackagePath": "staticwebassets\\FotosCurri\\peeeeeepo.PNG"
+    },
+    {
+      "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\FotosCurri\\peepo.gif",
+      "PackagePath": "staticwebassets\\FotosCurri\\peepo.gif"
+    },
+    {
       "Id": "C:\\Users\\simpl\\OneDrive\\Escritorio\\repo-backend\\webprogramming-backend\\web-24BM\\web-24BM\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

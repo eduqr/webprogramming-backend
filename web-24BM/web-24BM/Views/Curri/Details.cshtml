@@ -1,0 +1,47 @@
+﻿@model web_24BM.Models.Curriculum
+
+<h4 class="fw-bold mb-4 text-center" style="color: #92aad0;">Detalles del currículum #@Model.Id</h4>
+
+<div class="d-flex justify-content-center align-items-center mb-3" style="min-height: 100vh;">
+    <div class="card" style="width: 18rem; background-color: #92aad0;">
+        <img src="~/FotosCurri/@Model.NombreFoto" title="@Model.NombreFoto" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="mb-3">
+                <label class="fw-bold" >Nombre</label>
+                <p class="card-text">@Model.Nombre</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Apellidos</label>
+                <p class="card-text">@Model.Apellidos</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">CURP</label>
+                <p class="card-text">@Model.CURP</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Email</label>
+                <p class="card-text">@Model.Email</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Fecha de Nacimiento</label>
+                <p class="card-text">@Model.FechaNacimiento.ToString("dd-MM-yyyy")</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Direccion</label>
+                <p class="card-text">@Model.Direccion</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Objetivo</label>
+                <p class="card-text">@Model.Objetivo</p>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Datos laborales</label>
+                <p class="card-text">@Model.DatosLaboral</p>
+            </div>
+        </div>
+
+        <div class="card-body text-center">
+            <a class="btn btn-rounded" style="background-color: #AD8A64; color: #000;" asp-action="Index" asp-controller="Curri">Volver</a>
+        </div>
+    </div>
+</div>

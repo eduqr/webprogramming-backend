@@ -1,0 +1,60 @@
+﻿@model web_24BM.Models.Curriculum
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                    <div class="col-md-4 text-center"
+                         style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; background-color: #92aad0">
+                        <img src="~/FotosCurri/@Model.NombreFoto" title="@Model.Nombre"
+                             alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                        <h5>@Model.Nombre @Model.Apellidos</h5>
+                        <p>#@Model.Id</p>
+                        <i class="far fa-edit mb-5"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <h6>Información personal</h6>
+                            <hr class="mt-0 mb-4">
+                            <div class="row pt-1">
+                                <div class="col-6 mb-3">
+                                    <h6>Correo</h6>
+                                    <p class="text-muted">@Model.Email</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>CURP</h6>
+                                    <p class="text-muted">@Model.CURP</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>Fecha de nacimiento</h6>
+                                    <p class="text-muted">@Model.FechaNacimiento.ToString("dd-MM-yyyy")</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>Dirección</h6>
+                                    <p class="text-muted">@Model.Direccion</p>
+                                </div>
+                            </div>
+                            <h6>Extra</h6>
+                            <hr class="mt-0 mb-4">
+                            <div class="row pt-1">
+                                <div class="col-6 mb-3">
+                                    <h6>Objetivo</h6>
+                                    <p class="text-muted">@Model.Objetivo</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>Datos laborales</h6>
+                                    <p class="text-muted">@Model.DatosLaboral</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mb-5">
+    <a class="btn btn-rounded" style="background-color: #AD8A64; color: #000;" asp-action="Index" asp-controller="Curri">Volver</a>
+</div>

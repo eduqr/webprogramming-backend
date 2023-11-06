@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<web_24BM.Models.Curriculum>
 
-<h1 class="text-center">Lista de currículums</h1>
+<h2 class="text-center fw-bold mb-4" style="color: #92aad0;">Lista de currículums</h2>
 
-<div class="row">
+<div class="row mb-3 mt-3">
 	@if (TempData["MenssageSuccess"] != null)
 	{
 		<div class="alert alert-success">@TempData["MenssageSuccess"]</div>
@@ -13,93 +13,73 @@
 	}
 
 	<div class="col-12">
-		<a class="btn btn-success mb-3 me-auto" asp-action="Create" asp-controller="Curri">Nuevo curriculum</a>
+        <a class="btn mb-3 me-auto" style="background-color: #495568; color: #fff; font-weight: bold;" asp-action="Create" asp-controller="Curri">Nuevo currículum</a>
 	</div>
 	<div class="col-12">
 		@if (Model.Any())
 		{
-			<table class="table table-bordered table-responsive">
-				<thead>
-					<tr>
-						<th>
-							ID
-						</th>
-						<th>
-							Nombre
-						</th>
-						<th>
-							Apellidos
-						</th>
-						<th>
-							Email
-						</th>
-						<th>
-							Fecha nacimiento
-						</th>
-						<th>
-							Dirección
-						</th>
-						<th>
-							Objetivo
-						</th>
-						<th>
-							Datos laborales
-						</th>
-						<th>
-							Foto
-						</th>
-						<th>Acciones</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach (var item in Model)
-					{
-						<tr>
-							<td>
-								@item.Id
-							</td>
-							<td>
-								@item.Nombre
-							</td>
-							<td>
-								@item.Apellidos
-							</td>
-							<td>
-								@item.Email
-							</td>
-							<td>
-								@item.FechaNacimiento
-							</td>
-							<td>
-								@item.Direccion
-							</td>
-							<td>
-								@item.Objetivo
-							</td>
-							<td>
-								@item.DatosLaboral
-							</td>
-							<td>
-								Aqui foto
-							</td>
-							<td>
-								<div class="row">
-									<div class="col-2">
-										<a class="btn m-5 btn-primary" asp-action="Edit" asp-controller="Curri" asp-route-idCurriculum="@item.Id">Editar</a>
-									</div>
-									<div class="col-2">
+            <table class="table table-bordered table-responsive table-hover">
+                <thead style="background-color: #212529; color:white;">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>CURP</th>
+                        <th>Email</th>
+                        @* <th>Fecha nacimiento</th>
+                        <th>Dirección</th>
+                        <th>Objetivo</th>
+                        <th>Datos laborales</th> *@
+                        <th>Foto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Apellidos</td>
+                            <td>@item.CURP</td>
+                            <td>@item.Email</td>
+                            @* <td>@item.FechaNacimiento.ToString("dd-MM-yyyy")</td>
+                            <td>@item.Direccion</td>
+                            <td>@item.Objetivo</td>
+                            <td>@item.DatosLaboral</td> *@
+                            <td><img src="~/FotosCurri/@item.NombreFoto" width="140" height="140" title="Foto de @item.Nombre" alt="Fotografía de @item.Nombre"></td>
+                            <td>
+                                <div class="d-flex flex-column justify-content-center justify-content-md-start">
+                                    <!-- Primera fila -->
+                                    <div class="d-flex mb-2">
+                                        <div class="me-2">
+                                            <a class="btn" style="background-color: #AD8A64;" asp-action="Edit" asp-controller="Curri" asp-route-idCurriculum="@item.Id">Editar</a>
+                                        </div>
+                                        <div>
+                                            <form asp-action="Delete" method="post">
+                                                <input type="hidden" name="idCurriculum" value="@item.Id">
+                                                <button type="submit" class="btn" style="background-color: #93032E; color: white;">Eliminar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- Segunda fila -->
+                                    <div class="d-flex">
+                                        <div class="me-2">
+                                            <a class="btn" style="background-color: #3B8EA5;" asp-action="Details" asp-controller="Curri" asp-route-idCurriculum="@item.Id">Detalles</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn" style="background-color: #B4CDED;" asp-action="SeeCV" asp-controller="Curri" asp-route-idCurriculum="@item.Id">Ver CV</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-										<form asp-action="Delete" method="post">
-											<input type="hidden" name="idCurriculum" value="@item.Id">
-											<button type="submit" class="btn btn-danger">Eliminar</button>
-										</form>
-									</div>
-								</div>
-							</td>
-						</tr>
-					}
-				</tbody>
-			</table>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
 		}
 	</div>
 </div> 

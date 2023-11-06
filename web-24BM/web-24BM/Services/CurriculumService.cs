@@ -1,4 +1,5 @@
-﻿using web_24BM.Data;
+﻿using System.Text.RegularExpressions;
+using web_24BM.Data;
 using web_24BM.Models;
 using web_24BM.Repository;
 
@@ -18,11 +19,40 @@ namespace web_24BM.Services
             ResponseHelper response = new ResponseHelper();
             try
             {
+                int edad = (DateTime.Now.Year - model.FechaNacimiento.Year) - (DateTime.Now.DayOfYear < model.FechaNacimiento.DayOfYear ? 1 : 0);
+                if (!(edad >= 18 && edad <= 100))
+                {
+                    return response;
+                }
+
+                string expressionForCURP = @"^[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z\d]\d$";
+                if (!Regex.IsMatch(model.CURP, expressionForCURP))
+                {
+                    return response;
+                }
+
+
+                string filePath = "";
+                string fileName = "";
+                if (model.Foto != null && model.Foto.Length > 0)
+                {
+                    fileName = Path.GetFileName(model.Foto.FileName);
+                    filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/FotosCurri", fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await model.Foto.CopyToAsync(fileStream);
+                    }
+
+                }
+                model.NombreFoto = fileName;
+
+
                 var result = await _Repository.Create(model);
                 if (result > 0)
                 {
                     response.Success = true;
-                    response.Message = $"Se agrego la evidencia {model.Nombre}";
+                    response.Message = $"Se agregó el currículum de {model.Nombre} con éxito";
                 }
             }
             catch (Exception e)
@@ -38,10 +68,19 @@ namespace web_24BM.Services
 
 			try
 			{
-				if (await _Repository.Delete(IdCurriculum) > 0)
+                Curriculum curriculum = await _Repository.GetById(IdCurriculum);
+                
+                if (!String.IsNullOrEmpty(curriculum.NombreFoto))
+                {
+                    string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/FotosCurri", curriculum.NombreFoto);
+
+                    File.Delete(filePath);
+                }
+
+                if (await _Repository.Delete(IdCurriculum) > 0)
 				{
 					response.Success = true;
-					response.Message = "Se ha eliminado el registro con éxito.";
+					response.Message = "Se ha eliminado el currículum con éxito.";
 				}
 			}
 			catch (Exception e)
@@ -87,11 +126,49 @@ namespace web_24BM.Services
 
 			try
 			{
-				if (await _Repository.Update(model) > 0)
-				{
-					response.Success = true;
-					response.Message = $"Se ha actualizado el dato {model.Nombre} con éxito.";
-				}
+                int edad = (DateTime.Now.Year - model.FechaNacimiento.Year) - (DateTime.Now.DayOfYear < model.FechaNacimiento.DayOfYear ? 1 : 0);
+                if (!(edad >= 18 && edad <= 100))
+                {
+                    return response;
+                }
+
+                string expressionForCURP = @"^[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z\d]\d$";
+                if (!Regex.IsMatch(model.CURP, expressionForCURP))
+                {
+                    return response;
+                }
+
+                if (model.Foto != null && model.Foto.Length > 0)
+                {
+                    string filePath = "";
+                    string fileName = "";
+
+                    fileName = Path.GetFileName(model.Foto.FileName);
+                    filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/FotosCurri", fileName);
+
+                    File.Delete(filePath);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await model.Foto.CopyToAsync(fileStream);
+                    }
+
+                    model.NombreFoto = fileName;
+                    if (await _Repository.Update(model) > 0)
+                    {
+                        response.Success = true;
+                        response.Message = $"Se ha actualizado el currículum de {model.Nombre} con éxito.";
+                    }
+                }
+                else
+                {
+                    if (await _Repository.Update(model) > 0)
+                    {
+                        response.Success = true;
+                        response.Message = $"Se ha actualizado el currículum de {model.Nombre} con éxito.";
+                    }
+                }
+                
 			}
 			catch (Exception e)
 			{
